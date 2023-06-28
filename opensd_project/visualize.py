@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
 from matplotlib import patches
+import cv2
 
 
 def show_reference_image(images, points=[], roi_size=None, bit_depth=12):
@@ -60,3 +61,8 @@ def animate_video(images, fps=30, bit_depth=12):
     ani = animation.FuncAnimation(fig, updatefig, blit=True, frames=images.shape[0], 
         interval=1000/fps)
     return ani
+
+def image_save(image,save_path):
+    filename = 'savedImage.jpg'
+    cv2.imwrite(save_path+filename,image)
+    print('Successfully saved')
