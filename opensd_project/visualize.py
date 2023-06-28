@@ -51,6 +51,7 @@ def animate_video(images, fps=30, bit_depth=12):
     # display data for first image
     im = plt.imshow(images[0], cmap='gray', vmin=0, vmax=2**bit_depth, animated=True) 
 
+    # added second comment
     def updatefig(i):
         im.set_array(images[i])
         return im,
