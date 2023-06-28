@@ -23,6 +23,7 @@ def show_reference_image(images, points=[], roi_size=None, bit_depth=12):
 
     if points:
         ax.scatter(np.array(points)[:, 1], np.array(points)[:, 0], marker='.', color='r')
+        ax.set_title('Show reference image')
         
         if roi_size is not None:
             for point in np.array(points):
